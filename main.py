@@ -6,9 +6,9 @@ import os
 # Configuración del logger
 # logging.basicConfig(level=logging.DEBUG)
 
-# Obtener la URL del archivo ISM manifest como argumento de línea de comandos
-parser = argparse.ArgumentParser(description='Descarga un video protegido por PlayReady.')
-parser.add_argument('url', metavar='URL', type=str, help='URL del archivo ISM manifest')
+# Get the URL of the ISM manifest file as a command line argument
+parser = argparse.ArgumentParser(description='Download a PlayReady-protected video.')
+parser.add_argument('url', metavar='URL', type=str, help='URL from the ISM manifest archive')
 args = parser.parse_args()
 
 # Descargar el archivo de video con Aria2
@@ -93,4 +93,4 @@ for child in root:
                     print(canal_audio_string)
 
 # Eliminar el archivo .ism
-os.remove(archivo_manifest)
+#os.remove(archivo_manifest)
